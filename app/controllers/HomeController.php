@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class HomeController extends Controller
 {
-    public function getIndex($name)
+    public function getIndex()
     {
-        return $name;
+        return view('index', array('name' => 'saeed'));
     }
 }

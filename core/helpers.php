@@ -25,3 +25,13 @@ function get_function_methods($className, $methodName)
 
     return $params;
 }
+
+function view($view, $data = '')
+{
+    ob_start();
+    include __DIR__.'/../app/views/'.$view.'.php';
+    $var = ob_get_contents();
+    ob_end_clean();
+
+    return $var;
+}
