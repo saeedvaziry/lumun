@@ -1,7 +1,18 @@
 <?php
 
-$router->respond('GET', '/[:name]', function ($request) {
-    return action('HomeController#getIndex', $request);
-});
+use Core\Foundation\Router\Router as Router;
 
-// $router->respond('GET', '/', action('HomeController#getIndex'));
+Router::get('/','HomeController#getIndex');
+
+// $router->respond('GET', '/?', function ($request) {
+//     return action('HomeController#getIndex', $request);
+// });
+//
+// $router->with('/panel',function() use ($router){
+//     $router->respond('GET', '/?', function ($request) {
+//         return "panel";
+//     });
+//     $router->respond('GET', '/user/?', function ($request) {
+//         return "user";
+//     });
+// });
