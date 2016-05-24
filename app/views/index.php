@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?php $this->layout('templates/home') ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>Hello</title>
-</head>
+<?php $this->start('title') ?>
+salam
+<?php $this->stop() ?>
 
-<body>
-    <h1>Hello World</h1>
-    <p>{{ name }}</p>
-    <% name %>
-</body>
-
-</html>
+<h1>Hello World</h1>
+<p><?= $name ?></p>

@@ -11,6 +11,7 @@
     	"propel/propel": "~2.0@dev",
         "klein/klein": "^2.1",
         "mustache/mustache": "^2.10",
-        "twig/twig": "~1.0"
+        "twig/twig": "~1.0",
+        "league/plates": "^3.1"
     }
 }

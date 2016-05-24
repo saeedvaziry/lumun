@@ -45,29 +45,9 @@ function get_function_methods($className, $methodName)
 
 function view($view, $data = array())
 {
-    // twig template engine
-    $loader = new Twig_Loader_Filesystem(__DIR__.'/../app/views');
-    $template = new Twig_Environment($loader);
-    $template = new Twig_Environment($loader, array(
-        'cache' => __DIR__.'/../storage/cache/views',
-    ));
-
-    echo $template->render($view.'.php', $data);
-    
-    // mustache template engine
-    // Mustache_Autoloader::register();
-    // $template = new Mustache_Engine(array(
-    //     'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__).'/../app/views', array('extension' => '.php')),
-    // ));
-    // return $template->render($view, $data);
-
-    // manual template engine
-    // ob_start();
-    // include __DIR__.'/../app/views/'.$view.'.php';
-    // $var = ob_get_contents();
-    // ob_end_clean();
-    //
-    // return $var;
+    $templates = new League\Plates\Engine(__DIR__.'/../app/views');
+    echo $templates->render($view, $data);
+    die();
 }
 
 function print_r_d($data)

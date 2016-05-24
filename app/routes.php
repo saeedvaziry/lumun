@@ -1,6 +1,6 @@
 <?php
 
-use Core\Foundation\Router\Router as Router;
+use Core\Foundation\Router\Router;
 
 Router::get('/','HomeController#getIndex');
 
